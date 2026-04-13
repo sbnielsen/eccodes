@@ -1,0 +1,535 @@
+# (C) Copyright 2005- ECMWF.
+
+# Concept channelNumber
+#
+# Maps (satelliteSeries, satelliteNumber, instrumentType, scaledValueOfCentralWaveNumber)
+# to the standard instrument channel number.
+#
+# Source tables:
+#   satelliteSeries  -> BUFR Code Table 0 02 020 (Common Code Table C-5)
+#   satelliteNumber  -> BUFR Code Table 0 01 007 (Common Code Table C-5)
+#   instrumentType   -> BUFR Code Table 0 02 019 (Common Code Table C-8)
+#
+# Channel numbering follows each instrument's standard convention.
+# Wave number is in m^-1 (with scaleFactorOfCentralWaveNumber typically 0).
+#   wavelength (um) = 1e6 / scaledValueOfCentralWaveNumber
+#
+# In case of a repeated entry:
+#  set uses the FIRST one
+#  get returns the LAST match
+
+# ==========================================================================
+# SEVIRI - Spinning Enhanced Visible and Infrared Imager (instrumentType=207)
+# On MSG satellites (satelliteSeries=333): METEOSAT-8(55), -9(56), -10(57), -11(70)
+#
+# Channel  Name    Wavelength   WaveNumber (m^-1)
+# 1        VIS006  0.635 um     1574803
+# 2        VIS008  0.81 um      1234568
+# 3        NIR016  1.64 um      609756
+# 4        IR039   3.9 um       256410
+# 5        WV062   6.2 um       161290
+# 6        WV073   7.3 um       136986
+# 7        IR087   8.7 um       114942
+# 8        IR097   9.7 um       103092
+# 9        IR108   10.8 um      92592
+# 10       IR120   12.0 um      82644
+# 11       IR134   13.4 um      74626
+# 12       HRV     broad band
+# ==========================================================================
+
+# --- METEOSAT-8 (satelliteNumber=55) ---
+'1'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=1574803; }
+'2'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=1234568; }
+'3'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=609756; }
+'4'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=256410; }
+'5'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=161290; }
+'6'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=136986; }
+'7'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=114942; }
+'8'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=103092; }
+'9'  = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=92592; }
+'10' = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=82644; }
+'11' = { satelliteSeries=333; satelliteNumber=55; instrumentType=207; scaledValueOfCentralWaveNumber=74626; }
+
+# --- METEOSAT-9 (satelliteNumber=56) ---
+'1'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=1574803; }
+'2'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=1234568; }
+'3'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=609756; }
+'4'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=256410; }
+'5'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=161290; }
+'6'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=136986; }
+'7'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=114942; }
+'8'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=103092; }
+'9'  = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=92592; }
+'10' = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=82644; }
+'11' = { satelliteSeries=333; satelliteNumber=56; instrumentType=207; scaledValueOfCentralWaveNumber=74626; }
+
+# --- METEOSAT-10 (satelliteNumber=57) ---
+'1'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=1574803; }
+'2'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=1234568; }
+'3'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=609756; }
+'4'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=256410; }
+'5'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=161290; }
+'6'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=136986; }
+'7'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=114942; }
+'8'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=103092; }
+'9'  = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=92592; }
+'10' = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=82644; }
+'11' = { satelliteSeries=333; satelliteNumber=57; instrumentType=207; scaledValueOfCentralWaveNumber=74626; }
+
+# --- METEOSAT-11 (satelliteNumber=70) ---
+'1'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=1574803; }
+'2'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=1234568; }
+'3'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=609756; }
+'4'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=256410; }
+'5'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=161290; }
+'6'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=136986; }
+'7'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=114942; }
+'8'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=103092; }
+'9'  = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=92592; }
+'10' = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=82644; }
+'11' = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=74626; }
+
+# --- Additional DWD METEOSAT-11 wave numbers (from observational data) ---
+# Appears to use 83333 m^-1 (~12.0 um) as an alternate IR120 encoding
+'10' = { satelliteSeries=333; satelliteNumber=70; instrumentType=207; scaledValueOfCentralWaveNumber=83333; }
+
+# ==========================================================================
+# MVIRI - Meteosat Visible and Infra-Red Imager (instrumentType=205)
+# On MOP satellites (satelliteSeries=331): METEOSAT-3(50), -4(51), -5(52), -6(53), -7(54)
+# Also MTP satellites (satelliteSeries=332): METEOSAT-1(58), -2(59)
+#
+# Channel  Name    Wavelength   WaveNumber (m^-1)
+# 1        VIS     0.4-1.1 um   (broadband, no single wave number)
+# 2        WV      6.4 um       156250
+# 3        IR      11.5 um      86956
+# ==========================================================================
+
+# --- METEOSAT-3 (satelliteNumber=50) ---
+'2' = { satelliteSeries=331; satelliteNumber=50; instrumentType=205; scaledValueOfCentralWaveNumber=156250; }
+'3' = { satelliteSeries=331; satelliteNumber=50; instrumentType=205; scaledValueOfCentralWaveNumber=86956; }
+
+# --- METEOSAT-4 (satelliteNumber=51) ---
+'2' = { satelliteSeries=331; satelliteNumber=51; instrumentType=205; scaledValueOfCentralWaveNumber=156250; }
+'3' = { satelliteSeries=331; satelliteNumber=51; instrumentType=205; scaledValueOfCentralWaveNumber=86956; }
+
+# --- METEOSAT-5 (satelliteNumber=52) ---
+'2' = { satelliteSeries=331; satelliteNumber=52; instrumentType=205; scaledValueOfCentralWaveNumber=156250; }
+'3' = { satelliteSeries=331; satelliteNumber=52; instrumentType=205; scaledValueOfCentralWaveNumber=86956; }
+
+# --- METEOSAT-6 (satelliteNumber=53) ---
+'2' = { satelliteSeries=331; satelliteNumber=53; instrumentType=205; scaledValueOfCentralWaveNumber=156250; }
+'3' = { satelliteSeries=331; satelliteNumber=53; instrumentType=205; scaledValueOfCentralWaveNumber=86956; }
+
+# --- METEOSAT-7 (satelliteNumber=54) ---
+'2' = { satelliteSeries=331; satelliteNumber=54; instrumentType=205; scaledValueOfCentralWaveNumber=156250; }
+'3' = { satelliteSeries=331; satelliteNumber=54; instrumentType=205; scaledValueOfCentralWaveNumber=86956; }
+
+# --- METEOSAT-1 (MTP, satelliteNumber=58) ---
+'2' = { satelliteSeries=332; satelliteNumber=58; instrumentType=205; scaledValueOfCentralWaveNumber=156250; }
+'3' = { satelliteSeries=332; satelliteNumber=58; instrumentType=205; scaledValueOfCentralWaveNumber=86956; }
+
+# --- METEOSAT-2 (MTP, satelliteNumber=59) ---
+'2' = { satelliteSeries=332; satelliteNumber=59; instrumentType=205; scaledValueOfCentralWaveNumber=156250; }
+'3' = { satelliteSeries=332; satelliteNumber=59; instrumentType=205; scaledValueOfCentralWaveNumber=86956; }
+
+# ==========================================================================
+# GOES Imager (instrumentType=615)
+# On GOES satellites (satelliteSeries=241)
+#
+# Channel  Wavelength   WaveNumber (m^-1)
+# 1        0.65 um      1538461
+# 2        3.9 um       256410
+# 3        6.7 um       149253
+# 4        10.7 um      93457
+# 5        12.0 um      83333
+# ==========================================================================
+
+# --- GOES-8 (satelliteNumber=252) ---
+'1' = { satelliteSeries=241; satelliteNumber=252; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=252; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=252; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=252; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=252; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# --- GOES-9 (satelliteNumber=253) ---
+'1' = { satelliteSeries=241; satelliteNumber=253; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=253; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=253; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=253; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=253; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# --- GOES-10 (satelliteNumber=254) ---
+'1' = { satelliteSeries=241; satelliteNumber=254; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=254; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=254; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=254; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=254; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# --- GOES-11 (satelliteNumber=255) ---
+'1' = { satelliteSeries=241; satelliteNumber=255; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=255; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=255; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=255; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=255; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# --- GOES-12 (satelliteNumber=256) ---
+'1' = { satelliteSeries=241; satelliteNumber=256; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=256; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=256; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=256; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=256; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# --- GOES-13 (satelliteNumber=257) ---
+'1' = { satelliteSeries=241; satelliteNumber=257; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=257; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=257; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=257; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=257; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# --- GOES-14 (satelliteNumber=258) ---
+'1' = { satelliteSeries=241; satelliteNumber=258; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=258; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=258; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=258; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=258; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# --- GOES-15 (satelliteNumber=259) ---
+'1' = { satelliteSeries=241; satelliteNumber=259; instrumentType=615; scaledValueOfCentralWaveNumber=1538461; }
+'2' = { satelliteSeries=241; satelliteNumber=259; instrumentType=615; scaledValueOfCentralWaveNumber=256410; }
+'3' = { satelliteSeries=241; satelliteNumber=259; instrumentType=615; scaledValueOfCentralWaveNumber=149253; }
+'4' = { satelliteSeries=241; satelliteNumber=259; instrumentType=615; scaledValueOfCentralWaveNumber=93457; }
+'5' = { satelliteSeries=241; satelliteNumber=259; instrumentType=615; scaledValueOfCentralWaveNumber=83333; }
+
+# ==========================================================================
+# AVHRR/3 (instrumentType=591)
+# On NOAA TIROS-2 (NOAA-14 onwards, satelliteSeries=3)
+# and EPS/MetOp (satelliteSeries=61)
+#
+# Channel  Wavelength   WaveNumber (m^-1)
+# 1        0.63 um      1587301
+# 2        0.86 um      1162790
+# 3a       1.61 um      621118
+# 3b       3.74 um      267379
+# 4        10.8 um      92592
+# 5        12.0 um      83333
+# ==========================================================================
+
+# --- NOAA-15 (satelliteNumber=206) ---
+'1'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=591; scaledValueOfCentralWaveNumber=1587301; }
+'2'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=591; scaledValueOfCentralWaveNumber=1162790; }
+'3a' = { satelliteSeries=3; satelliteNumber=206; instrumentType=591; scaledValueOfCentralWaveNumber=621118; }
+'3b' = { satelliteSeries=3; satelliteNumber=206; instrumentType=591; scaledValueOfCentralWaveNumber=267379; }
+'4'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=591; scaledValueOfCentralWaveNumber=92592; }
+'5'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=591; scaledValueOfCentralWaveNumber=83333; }
+
+# --- NOAA-16 (satelliteNumber=207) ---
+'1'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=591; scaledValueOfCentralWaveNumber=1587301; }
+'2'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=591; scaledValueOfCentralWaveNumber=1162790; }
+'3a' = { satelliteSeries=3; satelliteNumber=207; instrumentType=591; scaledValueOfCentralWaveNumber=621118; }
+'3b' = { satelliteSeries=3; satelliteNumber=207; instrumentType=591; scaledValueOfCentralWaveNumber=267379; }
+'4'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=591; scaledValueOfCentralWaveNumber=92592; }
+'5'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=591; scaledValueOfCentralWaveNumber=83333; }
+
+# --- NOAA-17 (satelliteNumber=208) ---
+'1'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=591; scaledValueOfCentralWaveNumber=1587301; }
+'2'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=591; scaledValueOfCentralWaveNumber=1162790; }
+'3a' = { satelliteSeries=3; satelliteNumber=208; instrumentType=591; scaledValueOfCentralWaveNumber=621118; }
+'3b' = { satelliteSeries=3; satelliteNumber=208; instrumentType=591; scaledValueOfCentralWaveNumber=267379; }
+'4'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=591; scaledValueOfCentralWaveNumber=92592; }
+'5'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=591; scaledValueOfCentralWaveNumber=83333; }
+
+# --- NOAA-18 (satelliteNumber=209) ---
+'1'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=591; scaledValueOfCentralWaveNumber=1587301; }
+'2'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=591; scaledValueOfCentralWaveNumber=1162790; }
+'3a' = { satelliteSeries=3; satelliteNumber=209; instrumentType=591; scaledValueOfCentralWaveNumber=621118; }
+'3b' = { satelliteSeries=3; satelliteNumber=209; instrumentType=591; scaledValueOfCentralWaveNumber=267379; }
+'4'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=591; scaledValueOfCentralWaveNumber=92592; }
+'5'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=591; scaledValueOfCentralWaveNumber=83333; }
+
+# --- METOP-1 (EPS, satelliteNumber=3) ---
+'1'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=591; scaledValueOfCentralWaveNumber=1587301; }
+'2'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=591; scaledValueOfCentralWaveNumber=1162790; }
+'3a' = { satelliteSeries=61; satelliteNumber=3; instrumentType=591; scaledValueOfCentralWaveNumber=621118; }
+'3b' = { satelliteSeries=61; satelliteNumber=3; instrumentType=591; scaledValueOfCentralWaveNumber=267379; }
+'4'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=591; scaledValueOfCentralWaveNumber=92592; }
+'5'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=591; scaledValueOfCentralWaveNumber=83333; }
+
+# --- METOP-2 (EPS, satelliteNumber=4) ---
+'1'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=591; scaledValueOfCentralWaveNumber=1587301; }
+'2'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=591; scaledValueOfCentralWaveNumber=1162790; }
+'3a' = { satelliteSeries=61; satelliteNumber=4; instrumentType=591; scaledValueOfCentralWaveNumber=621118; }
+'3b' = { satelliteSeries=61; satelliteNumber=4; instrumentType=591; scaledValueOfCentralWaveNumber=267379; }
+'4'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=591; scaledValueOfCentralWaveNumber=92592; }
+'5'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=591; scaledValueOfCentralWaveNumber=83333; }
+
+# --- METOP-3 (EPS, satelliteNumber=5) ---
+'1'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=591; scaledValueOfCentralWaveNumber=1587301; }
+'2'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=591; scaledValueOfCentralWaveNumber=1162790; }
+'3a' = { satelliteSeries=61; satelliteNumber=5; instrumentType=591; scaledValueOfCentralWaveNumber=621118; }
+'3b' = { satelliteSeries=61; satelliteNumber=5; instrumentType=591; scaledValueOfCentralWaveNumber=267379; }
+'4'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=591; scaledValueOfCentralWaveNumber=92592; }
+'5'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=591; scaledValueOfCentralWaveNumber=83333; }
+
+# ==========================================================================
+# GMS-5 VISSR (instrumentType=489)
+# On GMS (satelliteSeries=271), satelliteNumber=152
+#
+# Channel  Wavelength   WaveNumber (m^-1)
+# 1        VIS 0.73 um  1369863
+# 2        IR1 11.0 um  90909
+# 3        IR2 12.0 um  83333
+# 4        WV  6.7 um   149253
+# ==========================================================================
+
+'1' = { satelliteSeries=271; satelliteNumber=152; instrumentType=489; scaledValueOfCentralWaveNumber=1369863; }
+'2' = { satelliteSeries=271; satelliteNumber=152; instrumentType=489; scaledValueOfCentralWaveNumber=90909; }
+'3' = { satelliteSeries=271; satelliteNumber=152; instrumentType=489; scaledValueOfCentralWaveNumber=83333; }
+'4' = { satelliteSeries=271; satelliteNumber=152; instrumentType=489; scaledValueOfCentralWaveNumber=149253; }
+
+# ==========================================================================
+# MTSAT Imager (instrumentType=294/295)
+# On MTSAT (satelliteSeries=272): MTSAT-1R(171), MTSAT-2(172)
+#
+# Channel  Wavelength   WaveNumber (m^-1)
+# 1        VIS  0.73 um 1369863
+# 2        IR1  3.8 um  263157
+# 3        IR2  6.8 um  147058
+# 4        IR3  10.8 um 92592
+# 5        IR4  12.0 um 83333
+# ==========================================================================
+
+# --- MTSAT-1R (instrumentType=294) ---
+'1' = { satelliteSeries=272; satelliteNumber=171; instrumentType=294; scaledValueOfCentralWaveNumber=1369863; }
+'2' = { satelliteSeries=272; satelliteNumber=171; instrumentType=294; scaledValueOfCentralWaveNumber=263157; }
+'3' = { satelliteSeries=272; satelliteNumber=171; instrumentType=294; scaledValueOfCentralWaveNumber=147058; }
+'4' = { satelliteSeries=272; satelliteNumber=171; instrumentType=294; scaledValueOfCentralWaveNumber=92592; }
+'5' = { satelliteSeries=272; satelliteNumber=171; instrumentType=294; scaledValueOfCentralWaveNumber=83333; }
+
+# --- MTSAT-2 (instrumentType=295) ---
+'1' = { satelliteSeries=272; satelliteNumber=172; instrumentType=295; scaledValueOfCentralWaveNumber=1369863; }
+'2' = { satelliteSeries=272; satelliteNumber=172; instrumentType=295; scaledValueOfCentralWaveNumber=263157; }
+'3' = { satelliteSeries=272; satelliteNumber=172; instrumentType=295; scaledValueOfCentralWaveNumber=147058; }
+'4' = { satelliteSeries=272; satelliteNumber=172; instrumentType=295; scaledValueOfCentralWaveNumber=92592; }
+'5' = { satelliteSeries=272; satelliteNumber=172; instrumentType=295; scaledValueOfCentralWaveNumber=83333; }
+
+# ==========================================================================
+# HIRS/3 (instrumentType=606)
+# On TIROS-2 (NOAA-14 onwards, satelliteSeries=3)
+# 20 channels, IR and shortwave
+#
+# Channel  Wavelength   WaveNumber (m^-1)
+# 1        14.95 um     66889
+# 2        14.71 um     67981
+# 3        14.49 um     69013
+# 4        14.22 um     70323
+# 5        13.97 um     71581
+# 6        13.64 um     73313
+# 7        13.35 um     74906
+# 8        11.11 um     90009
+# 9        9.71 um      103092
+# 10       8.16 um      122549
+# 11       7.33 um      136425
+# 12       6.52 um      153374
+# 13       4.57 um      218818
+# 14       4.52 um      221238
+# 15       4.47 um      223713
+# 16       4.45 um      224719
+# 17       4.13 um      242130
+# 18       4.00 um      250000
+# 19       3.76 um      265957
+# 20       0.69 um      1449275
+# ==========================================================================
+
+# --- NOAA-15 (satelliteNumber=206) ---
+'1'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=66889; }
+'2'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=67981; }
+'3'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=69013; }
+'4'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=70323; }
+'5'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=71581; }
+'6'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=73313; }
+'7'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=74906; }
+'8'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=90009; }
+'9'  = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=103092; }
+'10' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=122549; }
+'11' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=136425; }
+'12' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=153374; }
+'13' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=218818; }
+'14' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=221238; }
+'15' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=223713; }
+'16' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=224719; }
+'17' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=242130; }
+'18' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=250000; }
+'19' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=265957; }
+'20' = { satelliteSeries=3; satelliteNumber=206; instrumentType=606; scaledValueOfCentralWaveNumber=1449275; }
+
+# --- NOAA-16 (satelliteNumber=207) ---
+'1'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=66889; }
+'2'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=67981; }
+'3'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=69013; }
+'4'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=70323; }
+'5'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=71581; }
+'6'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=73313; }
+'7'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=74906; }
+'8'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=90009; }
+'9'  = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=103092; }
+'10' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=122549; }
+'11' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=136425; }
+'12' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=153374; }
+'13' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=218818; }
+'14' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=221238; }
+'15' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=223713; }
+'16' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=224719; }
+'17' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=242130; }
+'18' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=250000; }
+'19' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=265957; }
+'20' = { satelliteSeries=3; satelliteNumber=207; instrumentType=606; scaledValueOfCentralWaveNumber=1449275; }
+
+# --- NOAA-17 (satelliteNumber=208) ---
+'1'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=66889; }
+'2'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=67981; }
+'3'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=69013; }
+'4'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=70323; }
+'5'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=71581; }
+'6'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=73313; }
+'7'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=74906; }
+'8'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=90009; }
+'9'  = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=103092; }
+'10' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=122549; }
+'11' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=136425; }
+'12' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=153374; }
+'13' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=218818; }
+'14' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=221238; }
+'15' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=223713; }
+'16' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=224719; }
+'17' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=242130; }
+'18' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=250000; }
+'19' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=265957; }
+'20' = { satelliteSeries=3; satelliteNumber=208; instrumentType=606; scaledValueOfCentralWaveNumber=1449275; }
+
+# ==========================================================================
+# HIRS/4 (instrumentType=607)
+# On TIROS-2 (satelliteSeries=3): NOAA-18
+# and EPS/MetOp (satelliteSeries=61)
+# Same 20-channel structure as HIRS/3
+# ==========================================================================
+
+# --- NOAA-18 (satelliteNumber=209) ---
+'1'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=66889; }
+'2'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=67981; }
+'3'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=69013; }
+'4'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=70323; }
+'5'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=71581; }
+'6'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=73313; }
+'7'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=74906; }
+'8'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=90009; }
+'9'  = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=103092; }
+'10' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=122549; }
+'11' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=136425; }
+'12' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=153374; }
+'13' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=218818; }
+'14' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=221238; }
+'15' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=223713; }
+'16' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=224719; }
+'17' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=242130; }
+'18' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=250000; }
+'19' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=265957; }
+'20' = { satelliteSeries=3; satelliteNumber=209; instrumentType=607; scaledValueOfCentralWaveNumber=1449275; }
+
+# --- METOP-1 (EPS, satelliteNumber=3) ---
+'1'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=66889; }
+'2'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=67981; }
+'3'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=69013; }
+'4'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=70323; }
+'5'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=71581; }
+'6'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=73313; }
+'7'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=74906; }
+'8'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=90009; }
+'9'  = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=103092; }
+'10' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=122549; }
+'11' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=136425; }
+'12' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=153374; }
+'13' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=218818; }
+'14' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=221238; }
+'15' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=223713; }
+'16' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=224719; }
+'17' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=242130; }
+'18' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=250000; }
+'19' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=265957; }
+'20' = { satelliteSeries=61; satelliteNumber=3; instrumentType=607; scaledValueOfCentralWaveNumber=1449275; }
+
+# --- METOP-2 (EPS, satelliteNumber=4) ---
+'1'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=66889; }
+'2'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=67981; }
+'3'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=69013; }
+'4'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=70323; }
+'5'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=71581; }
+'6'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=73313; }
+'7'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=74906; }
+'8'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=90009; }
+'9'  = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=103092; }
+'10' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=122549; }
+'11' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=136425; }
+'12' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=153374; }
+'13' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=218818; }
+'14' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=221238; }
+'15' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=223713; }
+'16' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=224719; }
+'17' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=242130; }
+'18' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=250000; }
+'19' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=265957; }
+'20' = { satelliteSeries=61; satelliteNumber=4; instrumentType=607; scaledValueOfCentralWaveNumber=1449275; }
+
+# --- METOP-3 (EPS, satelliteNumber=5) ---
+'1'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=66889; }
+'2'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=67981; }
+'3'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=69013; }
+'4'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=70323; }
+'5'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=71581; }
+'6'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=73313; }
+'7'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=74906; }
+'8'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=90009; }
+'9'  = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=103092; }
+'10' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=122549; }
+'11' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=136425; }
+'12' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=153374; }
+'13' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=218818; }
+'14' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=221238; }
+'15' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=223713; }
+'16' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=224719; }
+'17' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=242130; }
+'18' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=250000; }
+'19' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=265957; }
+'20' = { satelliteSeries=61; satelliteNumber=5; instrumentType=607; scaledValueOfCentralWaveNumber=1449275; }
+
+# ==========================================================================
+# IVISSR (FY-2) (instrumentType=932)
+# On FY-2 (satelliteSeries=381): FY-2B(512), FY-2C(513), FY-2D(514)
+#
+# Channel  Wavelength   WaveNumber (m^-1)
+# 1        VIS 0.73 um  1369863
+# 2        IR1 10.8 um  92592
+# 3        IR2 12.0 um  83333
+# 4        WV 6.7 um    149253
+# 5        IR3 3.7 um   270270
+# ==========================================================================
+
+# --- FY-2B (satelliteNumber=512) ---
+'1' = { satelliteSeries=381; satelliteNumber=512; instrumentType=932; scaledValueOfCentralWaveNumber=1369863; }
+'2' = { satelliteSeries=381; satelliteNumber=512; instrumentType=932; scaledValueOfCentralWaveNumber=92592; }
+'3' = { satelliteSeries=381; satelliteNumber=512; instrumentType=932; scaledValueOfCentralWaveNumber=83333; }
+'4' = { satelliteSeries=381; satelliteNumber=512; instrumentType=932; scaledValueOfCentralWaveNumber=149253; }
+'5' = { satelliteSeries=381; satelliteNumber=512; instrumentType=932; scaledValueOfCentralWaveNumber=270270; }
+
+# --- FY-2C (satelliteNumber=513) ---
+'1' = { satelliteSeries=381; satelliteNumber=513; instrumentType=932; scaledValueOfCentralWaveNumber=1369863; }
+'2' = { satelliteSeries=381; satelliteNumber=513; instrumentType=932; scaledValueOfCentralWaveNumber=92592; }
+'3' = { satelliteSeries=381; satelliteNumber=513; instrumentType=932; scaledValueOfCentralWaveNumber=83333; }
+'4' = { satelliteSeries=381; satelliteNumber=513; instrumentType=932; scaledValueOfCentralWaveNumber=149253; }
+'5' = { satelliteSeries=381; satelliteNumber=513; instrumentType=932; scaledValueOfCentralWaveNumber=270270; }
+
+# --- FY-2D (satelliteNumber=514) ---
+'1' = { satelliteSeries=381; satelliteNumber=514; instrumentType=932; scaledValueOfCentralWaveNumber=1369863; }
+'2' = { satelliteSeries=381; satelliteNumber=514; instrumentType=932; scaledValueOfCentralWaveNumber=92592; }
+'3' = { satelliteSeries=381; satelliteNumber=514; instrumentType=932; scaledValueOfCentralWaveNumber=83333; }
+'4' = { satelliteSeries=381; satelliteNumber=514; instrumentType=932; scaledValueOfCentralWaveNumber=149253; }
+'5' = { satelliteSeries=381; satelliteNumber=514; instrumentType=932; scaledValueOfCentralWaveNumber=270270; }
