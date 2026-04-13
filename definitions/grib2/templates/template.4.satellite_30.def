@@ -22,3 +22,5 @@ if (new() || section4Length>14) {
 
 alias instrument = instrumentType;
 alias ident = satelliteNumber;
+
+concept_nofail channelNumber (unknown, "satelliteChannelConcept.def", conceptsDir2, conceptsDir1) : no_copy;
