@@ -11,6 +11,7 @@ if(class != 3) {
 }
 alias mars.instrument = instrumentType;
 alias mars.ident = satelliteNumber;
+alias mars.channel = channelNumber;
 
 alias mars.number = perturbationNumber;
 

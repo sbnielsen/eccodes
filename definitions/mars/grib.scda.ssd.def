@@ -1,3 +1,4 @@
 alias mars.instrument = instrumentType;
 alias mars.ident = satelliteNumber;
+alias mars.channel = channelNumber;
 
