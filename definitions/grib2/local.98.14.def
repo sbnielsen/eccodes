@@ -1,4 +1,4 @@
 # Local definition 14: Brightness temperature
 
-unsigned[4] channelNumberRaw = channelNumber : dump ;
+unsigned[4] channelNumberRaw = 0 : dump ;
 alias mars.channel = channelNumberRaw;

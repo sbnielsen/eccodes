@@ -1,6 +1,6 @@
 # Brightness temperature for long window 4Dvar system
 
-unsigned[4] channelNumberRaw = channelNumber : dump ;
+unsigned[4] channelNumberRaw = 0 : dump ;
 alias mars.channel = channelNumberRaw;
 
 unsigned[1] numberOfFrequencies : dump ;
