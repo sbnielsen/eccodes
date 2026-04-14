@@ -1,8 +1,4 @@
 # Local definition 24: Satellite Channel Data
 
-unsigned[2] channelNumberRaw = 0 : dump, can_be_missing;
+unsigned[2] channelNumberRaw = channelNumber : dump, can_be_missing;
 alias mars.channel = channelNumberRaw;
-
-when ( scaledValueOfCentralWaveNumber || satelliteNumber || instrumentType || satelliteSeries ) {
-    set_nofail channelNumberRaw = channelNumber;
-}

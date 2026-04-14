@@ -1,11 +1,7 @@
 # Brightness temperature for long window 4Dvar system
 
-unsigned[4] channelNumberRaw = 0 : dump ;
+unsigned[4] channelNumberRaw = channelNumber : dump ;
 alias mars.channel = channelNumberRaw;
-
-when ( scaledValueOfCentralWaveNumber || satelliteNumber || instrumentType || satelliteSeries ) {
-    set_nofail channelNumberRaw = channelNumber;
-}
 
 unsigned[1] numberOfFrequencies : dump ;
 alias totalNumberOfFrequencies =  numberOfFrequencies ;
